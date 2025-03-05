@@ -7,13 +7,13 @@ import DataProvider from './DataProvider';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/event_ticket/">
       <DataProvider>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<TicketSelection />} />
-            <Route path="attendee" element={<Attendee />} />
-            <Route path="bookedTicket" element={<BookedTicket />} />
+            <Route path="Attendee" element={<Attendee />} />
+            <Route path="BookedTicket" element={<BookedTicket />} />
           </Route>
         </Routes>
       </DataProvider>

@@ -87,7 +87,7 @@ function TicketSelection() {
         <Link to="#" className="cancel-btn">
           Cancel
         </Link>
-        <Link to="attendee" className="next-btn">
+        <Link to="Attendee" className="next-btn">
           Next
         </Link>
       </div>

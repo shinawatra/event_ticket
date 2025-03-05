@@ -98,7 +98,7 @@ function DataProvider({ children }) {
       setReqError('');
     }
 
-    navigate('/bookedTicket', { state: uploadedFiles });
+    navigate('/BookedTicket', { state: uploadedFiles });
   }
 
   useEffect(() => {
