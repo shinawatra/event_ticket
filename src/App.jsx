@@ -2,12 +2,12 @@ import TicketSelection from './component/TicketSelection';
 import Layout from './Layout';
 import Attendee from './component/Attendee';
 import BookedTicket from './component/BookedTicket';
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { BrowserRouter, Route, Routes, HashRouter } from 'react-router';
 import DataProvider from './DataProvider';
 
 function App() {
   return (
-    <BrowserRouter basename="/event_ticket/">
+    <HashRouter>
       <DataProvider>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -17,8 +17,10 @@ function App() {
           </Route>
         </Routes>
       </DataProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
 export default App;
+
+//<BrowserRouter basename="/event_ticket/"></BrowserRouter>
