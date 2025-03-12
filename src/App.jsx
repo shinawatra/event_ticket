@@ -8,7 +8,7 @@ import DataProvider from './DataProvider';
 
 function App() {
   return (
-    <BrowserRouter basename="/event_ticket/">
+    <BrowserRouter>
       <DataProvider>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -24,3 +24,5 @@ function App() {
 }
 
 export default App;
+
+//basename="/event_ticket/
