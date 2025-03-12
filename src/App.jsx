@@ -2,25 +2,25 @@ import TicketSelection from './component/TicketSelection';
 import Layout from './Layout';
 import Attendee from './component/Attendee';
 import BookedTicket from './component/BookedTicket';
-import { BrowserRouter, Route, Routes, HashRouter } from 'react-router';
+import NotFound from './NotFound';
+import { BrowserRouter, Route, Routes } from 'react-router';
 import DataProvider from './DataProvider';
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename="/event_ticket/">
       <DataProvider>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<TicketSelection />} />
-            <Route path="Attendee" element={<Attendee />} />
-            <Route path="BookedTicket" element={<BookedTicket />} />
+            <Route path="/Attendee" element={<Attendee />} />
+            <Route path="/BookedTicket" element={<BookedTicket />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </DataProvider>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
 export default App;
-
-//<BrowserRouter basename="/event_ticket/"></BrowserRouter>
